@@ -29,7 +29,7 @@ while i >= 0:
     coeffs.append(float(input(f"Enter coefficient number {deg - i + 1}: ")))
     i -= 1
 
-xlist = np.arange(lbound, ubound, step)
+xlist = np.arange(lbound, ubound + step, step)
 ylist = f(xlist, coeffs, deg)
 
 while abs(f(middle, coeffs, deg)) > tolerance:
